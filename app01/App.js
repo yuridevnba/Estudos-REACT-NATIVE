@@ -16,7 +16,7 @@ return(
   <View style={Estilo.conteiner}>
 
    <Image
-   source={require('./assets/logo.png')}
+   source={{uri:'https://cfbcursos.com.br/logoCanal.png'}}
    style={estilos.logo}
    />
 
