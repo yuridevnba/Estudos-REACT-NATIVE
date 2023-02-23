@@ -1,19 +1,13 @@
 
 
 import React from 'react';
-import {Text,View} from 'react-native';
+import {Text,View,Image,StyleSheet} from 'react-native';
 //import C1 from './componentes/comp1'
 import Estilo from './componentes/Estilos'
 import Caixas   from './componentes/Caixa'
 //import { Component } from 'react/cjs/react.production.min';
 
-const fexibir =(vp1)=>{
-  if(vp1){
-    return(<Text>Curso de React Native</Text>)
-  }else{
-    return(<Text>---</Text>)
-  }
-}
+  
 
 export default function App1(){
 
@@ -21,18 +15,31 @@ export default function App1(){
 return(
   <View style={Estilo.conteiner}>
 
+   <Image
+   source={require('./assets/logo.png')}
+   style={estilos.logo}
+   />
+
  <Caixas exibir={vexibir}/>
   
    <Text style={Estilo.textoPadrão}>Yuri SIlva</Text>
   
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
 
-   {fexibir?<Text>Curso de React Native</Text>:<Text>---</Text>}
-   {fexibir &&<Text>Curso de React Native</Text>}
+   
 </View>
 
  );
 };
+
+const estilos = StyleSheet.create({
+logo:{
+
+  width:100,
+  resizeMode:'repeat'
+}
+
+})
 
 
 
