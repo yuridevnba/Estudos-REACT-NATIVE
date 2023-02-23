@@ -1,7 +1,7 @@
 # Estudos-REACT-NATIVE
 # Curso-REACT
 
-<h1 align="center"> Curso REACT </h1>
+<h1 align="center"> Curso REACT NATIVE </h1>
 <header>
 Olá, sou Yuri Henrique.
 
