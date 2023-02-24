@@ -1,52 +1,21 @@
 
 
 import React from 'react';
-import {
-
-  Text,
-  View,
-  Image,
-  StyleSheet,
-  Button,
-  Alert
-
-
-} from 'react-native';
+import {Text, View,StyleSheet,} from 'react-native';
 import Estilo from './componentes/Estilos'
-import Caixas   from './componentes/Caixa'
+import Lp from './componentes/ListaPlana'
 
-
-
-
-
-  
-  
 
 export default function App1(){
 
-  let vexibir=true;
 return(
   <View style={Estilo.conteiner}>
 
-<Button
-title="Mostrar mensagem"
-onPress={()=>Alert.alert('MSG','Olá, Bom Dia Bença!!!')
-}
-/>
-
-
-   <Image
-  source={require('./assets/logo.png')}
-   style={estilos.logo}
-   />
-
- 
-  {vexibir?<Text>Curso de React Native</Text>:<Text>cfbcursos.com.br</Text>}
    <Text style={Estilo.textoPadrão}>Yuri SIlva</Text>
   
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
 
-   
+   <Lp/>
 </View>
 
  );
