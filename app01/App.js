@@ -1,37 +1,38 @@
 
 
-import React,{useState} from 'react';
-import {Text, View,StyleSheet,Button} from 'react-native';
+import React from 'react';
+import {Text, View,StyleSheet} from 'react-native';
 import Estilo from './componentes/Estilos'
-
+import CarroC from  './componentes/CarroC'
+import CarroF from  './componentes/CarrosF'
 
 
 
 
 export default function App1(){
 
-const[ligado,setLigado]=useState(false)
+
 
 return(
   <View style={Estilo.conteiner}>
 
-    <Button
-    title={ligado?"Desligar":"Ligar"}
-    onPress={()=>setLigado(!ligado)}// se ele for false vai passar para true e vice-versa.
-    />
-  
-  {ligado?
+    
  
 
   <View>
    <Text style={Estilo.textoPadrão}>Yuri SIlva</Text>
   
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
+
+   <CarroC nome="Golf"/>
+   <CarroC nome="HRV"/>
+
+   <CarroF nome="Fit"/>
+   <CarroF nome="Polo"/>
    
    </View>
- :
- <Text>***</Text>
-}
+
+
 </View>
 
  );
