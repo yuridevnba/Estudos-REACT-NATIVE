@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import {Text, View,StyleSheet} from 'react-native';
+import {Text, View,StyleSheet,SafeAreaView} from 'react-native';
 import Estilo from './componentes/Estilos'
 import CarroC from  './componentes/CarroC'
 import CarroF from  './componentes/CarrosF'
@@ -14,7 +14,7 @@ export default function App1(){
 
 
 return(
-  <View style={Estilo.conteiner}>
+  <SafeAreaView style={Estilo.conteiner}>
 
     
  
@@ -33,7 +33,7 @@ return(
    </View>
 
 
-</View>
+</SafeAreaView>
 
  );
 };

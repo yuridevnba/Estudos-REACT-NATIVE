@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { View,Text,Button } from 'react-native';
+import { View,Text,Switch} from 'react-native';
 
 // Componente Funcional, não é componente Classe.
 
@@ -7,23 +7,27 @@ export default function(props){
 
 
     const[ligado,setLigado]=useState(true)
+
+    const toggleLigado=()=>setLigado(!ligado)
+    //const togglelLigado=()=>setLigado(previousState =>!previousState)
     return(
 
 
         <View> 
 
         <Text>Carro:{props.nome} - Ligado:{ligado ? "Sim":"Não"}</Text>
-       <Button
+       <Switch
        
-       title={ligado?'Desligar':'ligar'}
-       onPress={
-            ()=>{setLigado(!ligado)}
+        trackColor={{false:'#777',true:'#3bf'}}
+        thumbColor={ligado?'#00f':'#444'}
 
-       }
-
-
+        value={ligado}
        
-       
+        onValueChange={
+         
+          (toggleLigado)
+
+        }
        
 
       />
