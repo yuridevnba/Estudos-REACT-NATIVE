@@ -3,9 +3,7 @@
 import React from 'react';
 import {Text, View,StyleSheet,SafeAreaView} from 'react-native';
 import Estilo from './componentes/Estilos'
-import CarroC from  './componentes/CarroC'
-import CarroF from  './componentes/CarrosF'
-
+import CxTx from  '../componentes/CaixaTexto'
 
 
 
@@ -24,11 +22,9 @@ return(
   
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
 
-   <CarroC nome="Golf"/>
-   <CarroC nome="HRV"/>
+   <CxTx/>
 
-   <CarroF nome="Fit"/>
-   <CarroF nome="Polo"/>
+
    
    </View>
 
