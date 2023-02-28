@@ -1,23 +1,27 @@
 
 
-import React from 'react';
-import {Text, View,StyleSheet,ImageBackground} from 'react-native';
+import React,{useState} from 'react';
+import {Text, View,StyleSheet,Button} from 'react-native';
 import Estilo from './componentes/Estilos'
-import Lp from './componentes/ListaPlana'
 
-const imgbg1='./assets/tela.jpg'
-const imgbg2='./assets/R.jpg'
+
+
+
 
 export default function App1(){
+
+const[ligado,setLigado]=useState(false)
 
 return(
   <View style={Estilo.conteiner}>
 
-  <ImageBackground
-  source={require(imgbg1)}
-  style={estilos.imagemFundo}
+    <Button
+    title={ligado?"Desligar":"Ligar"}
+    onPress={()=>setLigado(!ligado)}// se ele for false vai passar para true e vice-versa.
+    />
   
-  >
+  {ligado?
+ 
 
   <View>
    <Text style={Estilo.textoPadrão}>Yuri SIlva</Text>
@@ -25,8 +29,9 @@ return(
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
    
    </View>
-  {/*<Lp/>*/} 
-   </ImageBackground>
+ :
+ <Text>***</Text>
+}
 </View>
 
  );
