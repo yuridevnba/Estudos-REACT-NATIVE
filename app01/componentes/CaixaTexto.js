@@ -19,7 +19,7 @@ export default function(){
          value={nome}
         // onChangeText={(text)=>(setNome(text))}
         onChangeText={text=>setNome(text)}
-        multiline="true" // elemento de texto que tem diversas linhas.
+        //multiline="true" // elemento de texto que tem diversas linhas.
         autoCapitalize="characters" // tudo maiúsculo, words só a primeira letra maiúsculo.
          />
           <Text>Valor digitado:{nome}</Text>

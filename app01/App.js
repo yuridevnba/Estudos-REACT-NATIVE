@@ -3,7 +3,8 @@
 import React from 'react';
 import {Text, View,StyleSheet,SafeAreaView} from 'react-native';
 import Estilo from './componentes/Estilos'
-import CxTx from  '../componentes/CaixaTexto'
+//import CxTx from  './componentes/CaixaTexto'
+import Rolagem from  './componentes/Rolagem'
 
 
 
@@ -22,7 +23,9 @@ return(
   
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
 
-   <CxTx/>
+   {/*<CxTx/>*/}
+
+   <Rolagem/>
 
 
    
