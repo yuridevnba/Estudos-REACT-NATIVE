@@ -4,8 +4,9 @@ import React from 'react';
 import {Text, View,StyleSheet,SafeAreaView} from 'react-native';
 import Estilo from './componentes/Estilos'
 //import CxTx from  './componentes/CaixaTexto'
-import Rolagem from  './componentes/Rolagem'
-
+//import Rolagem from  './componentes/Rolagem'
+import Toque from  './componentes/Toque'
+import Modal from  './componentes/Modal'
 
 
 export default function App1(){
@@ -25,7 +26,11 @@ return(
 
    {/*<CxTx/>*/}
 
-   <Rolagem/>
+   {/*<Rolagem/>*/}
+
+   {/*<Toque/>*/}
+
+   <Modal/>
 
 
    
