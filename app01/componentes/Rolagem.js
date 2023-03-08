@@ -1,12 +1,31 @@
 import React,{useState} from 'react'
-import { View,Text,ScrollView } from 'react-native'
+import { View,Text,ScrollView,RefreshControl } from 'react-native'
 
 export default function(){
+
+    const [atualizando,setAtualizando]=useState(false)
+    function aoAtualizar(){
+        setAtualizando(true);
+        // código de atualização, rotina e tals.
+        setTimeout(()=>{setAtualizando(false)},3000);
+    }
     return(
 
+         
 
         <View style={{flex:1}}>
-        <ScrollView style={{backgroundColor:'#333', padding:15}} >
+        <ScrollView
+         style={{backgroundColor:'#333', padding:15}}
+         refreshControl={
+         <RefreshControl
+          refreshing={atualizando}
+          onRefresh={aoAtualizar}
+         />
+        
+        }
+         
+         
+         >
         
         <Text style={{color:'#eee'}}>
         Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
