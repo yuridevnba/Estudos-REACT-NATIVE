@@ -1,14 +1,19 @@
+/* eslint-disable prettier/prettier */
 import React,{useState} from 'react'
-import { View,Text,StyleSheet,TouchableOpacity,TouchableHighlight,TouchableWithoutFeedback } from 'react-native'
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+} from 'react-native';
 
 export default function(){
+  const [cont, setCont] = useState(0);
 
-    const [cont,setCont]=useState(0)
-
-
-    const contar=()=>{
-    
-        setCont(cont+1)
+  const contar = () => {
+    setCont(cont + 1);
 
 
     }

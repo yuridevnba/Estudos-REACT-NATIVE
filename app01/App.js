@@ -1,32 +1,64 @@
+/* eslint-disable prettier/prettier */
 
 
-import React from 'react';
-import {Text, View,StyleSheet,SafeAreaView} from 'react-native';
+import React,{useState} from 'react';
+import {Text, View,StyleSheet,SafeAreaView,StatusBar,Button} from 'react-native';
 import Estilo from './componentes/Estilos'
 //import CxTx from  './componentes/CaixaTexto'
-import Rolagem from  './componentes/Rolagem'
-import Toque from  './componentes/Toque'
-import Modal from  './componentes/Modal'
+/*import Rolagem from  './componentes/Rolagem'*/
+/*import Toque from  './componentes/Toque'*/
+/*import Modal from  './componentes/Modal'*/
 
 
 export default function App1(){
 
+const[cor,SetCor]=useState("black")
 
+const mudaCor=(c)=>{SetCor(c)}
 
 return(
+
   <SafeAreaView style={Estilo.conteiner}>
 
-    
- 
+    <StatusBar 
+    backgroundColor={cor}
+    barStyle='light-content'
+    hidden={false}
+    animated={true}
+    translucent={true}
+
+      />
 
   <View>
-   <Text style={Estilo.textoPadrão}>Yuri SIlva</Text>
+   <Text style={Estilo.textoPadrão}>Yuri Silva</Text>
   
    <Text style={Estilo.textoTitulo}>Unicap.br</Text>
 
+
+    <Button
+   title="Vermelho"
+   onPress={()=>{SetCor("red")}}
+    />
+
+   <Button
+   title="Azul"
+   onPress={()=>{mudaCor("blue")}}
+    />
+
+
+   <Button
+   title="Verde"
+   onPress={()=>{mudaCor("green")}}
+    />
+
+
+
+
+
+
    {/*<CxTx/>*/}
 
-   <Rolagem/>
+   {/*<Rolagem/>*/}
 
    {/*<Toque/>*/}
 

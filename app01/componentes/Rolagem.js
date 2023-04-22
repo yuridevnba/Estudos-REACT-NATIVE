@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+/*import React,{useState} from 'react'
 import { View,Text,ScrollView,RefreshControl } from 'react-native'
 
 export default function(){
@@ -7,15 +7,17 @@ export default function(){
     function aoAtualizar(){
         setAtualizando(true);
         // código de atualização, rotina e tals.
-        setTimeout(()=>{setAtualizando(false)},3000);
+    setTimeout(() => {
+      setAtualizando(false);
+    }, 3000);
     }
-    return(
-
+  return (
          
 
         <View style={{flex:1}}>
         <ScrollView
-         style={{backgroundColor:'#333', padding:15}}
+        // eslint-disable-next-line react-native/no-inline-styles
+        style={{backgroundColor: '#333', padding: 15}}
          refreshControl={
          <RefreshControl
           refreshing={atualizando}
@@ -28,15 +30,20 @@ export default function(){
          >
         
         <Text style={{color:'#eee'}}>
-        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
-        e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
-        de tipos e os embaralhou para fazer um livro de modelos de tipos.
-        
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non hendrerit felis. Aliquam vitae fringilla nisl. Quisque imperdiet nisi et semper tristique.
-         Quisque sit amet dapibus dolor, blandit molestie risus. Aliquam placerat sit amet lorem et convallis. 
-         Maecenas efficitur mattis ex a laoreet. Integer vitae pellentesque purus. Praesent vestibulum odio sed lacinia placerat. Maecenas tempor tortor velit, nec mollis turpis sodales non.
-          Pellentesque eu lorem hendrerit enim placerat lobortis. Fusce accumsan rhoncus massa eget egestas. Suspendisse sit amet enim sapien. Mauris elit turpis, faucibus sed pellentesque non, 
-          vehicula ut augue. Nullam nec maximus justo, 
+          Lorem Ipsum é simplesmente uma simulação de texto da indústria
+          tipográfica e de impressos, e vem sendo utilizado desde o século XVI,
+          quando um impressor desconhecido pegou uma bandeja de tipos e os
+          embaralhou para fazer um livro de modelos de tipos. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit. Etiam non hendrerit felis.
+          Aliquam vitae fringilla nisl. Quisque imperdiet nisi et semper
+          tristique. Quisque sit amet dapibus dolor, blandit molestie risus.
+          Aliquam placerat sit amet lorem et convallis. Maecenas efficitur
+          mattis ex a laoreet. Integer vitae pellentesque purus. Praesent
+          vestibulum odio sed lacinia placerat. Maecenas tempor tortor velit,
+          nec mollis turpis sodales non. Pellentesque eu lorem hendrerit enim
+          placerat lobortis. Fusce accumsan rhoncus massa eget egestas.
+          Suspendisse sit amet enim sapien. Mauris elit turpis, faucibus sed
+          pellentesque non, vehicula ut augue. Nullam nec maximus justo, in
         in mollis massa. Cras convallis eleifend.
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat, ipsum eu fermentum elementum, tellus ipsum porta dui, in facilisis ipsum tellus non magna. Vivamus lacus sem, efficitur vel faucibus vitae, rhoncus quis purus. Nulla mattis lorem sed velit posuere, ac aliquet nisi pretium. Sed molestie magna lacus, eget mattis nibh semper id.
@@ -65,4 +72,145 @@ tortor, volutpat sit amet purus a, semper varius velit. Quisque facilisis, arcu 
 
 
     )
+}*/
+import React,{useState} from 'react'
+import { View, Text, TouchableOpacity, StyleSheet,Button,TextInput } from 'react-native';
+
+export default function App() {
+
+  const [palavra, setPalavra] = useState("");
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  const reset = () => {
+    setCount(0);
+  };
+
+
+  return (
+    <View style={styles.container}>
+    
+    <View style={styles.containerinput}>
+
+     <TextInput
+         style={styles.input}
+          placeholder="digite aqui "
+         value={palavra}
+        
+        onChangeText={palavra=>setPalavra(palavra)}
+        
+        autoCapitalize="character" 
+         />
+          </View>
+
+          <View style={styles.containersquare}>
+
+
+      <Text style={styles.text}>{palavra}: {count}</Text>
+
+      <View style={styles.buttons}>
+
+        <Button style={styles.button} title="somar" onPress={increment}/>
+
+          
+
+        
+
+        <Button style={styles.button} title="cancelar" onPress={reset}/>
+
+          
+
+        
+
+        <Button style={styles.button}title="diminuir" onPress={decrement}/>
+
+
+        
+
+     
+</View>
+    </View>
+    </View>
+    
+  );
 }
+
+const styles = StyleSheet.create({
+
+  containerinput: {
+   
+    /*width:"100%",
+    textAlign: 'center',
+    justifyContent: 'center',
+    flexDirection:'row',*/
+   },
+  
+  container: {
+     flex:1,
+    backgroundColor: '#708090',
+    
+    width:"100%",
+    textAlign: 'center',
+    justifyContent: 'center',
+    flexDirection:'row',
+    marginTop:20,
+     marginHorizontal: 'auto',
+   },
+
+  square: {
+    //flex:1/2,
+    marginTop:150,
+    width: '80%',
+    height: '25%',
+    backgroundColor: '#eee',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+     marginHorizontal: 'auto',
+      //top:200
+  },
+
+  input:{
+    
+   borderWidth:3,
+   borderColor:'blue',
+   padding:10,
+   //height:10,
+   width:200,
+   //bottom:250
+   marginBottom:150
+   
+  
+  
+   
+   },
+  text: {
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    padding: 20,
+    marginTop: -80,
+  },
+  button: {
+    backgroundColor: '#3498db',
+    padding: 10,
+    borderRadius: 5,
+    width: '30%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+});
