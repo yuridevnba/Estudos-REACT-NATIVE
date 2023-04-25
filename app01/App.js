@@ -1,93 +1,84 @@
 /* eslint-disable prettier/prettier */
 
 
-import React,{useState} from 'react';
-import {Text, View,StyleSheet,SafeAreaView,StatusBar,Button} from 'react-native';
-import Estilo from './componentes/Estilos'
-//import CxTx from  './componentes/CaixaTexto'
-/*import Rolagem from  './componentes/Rolagem'*/
-/*import Toque from  './componentes/Toque'*/
-/*import Modal from  './componentes/Modal'*/
+import React,{Component} from 'react';
+import {Text, View,StyleSheet, Button} from 'react-native';
+import Estilo from './componentes/Estilos';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
+
+const Pilha=createStackNavigator();
+
+function TelaHome({navigation}){
+
+  return (
+
+// eslint-disable-next-line react-native/no-inline-styles
+<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+
+<Text>Tela Home</Text>
+<Text>curso react-native</Text>
+
+<Button
+title='TelaCanal'
+onPress={()=>navigation.navigate('Canal')}
+/>
+
+
+</View>
+
+  );
+}
+
+function TelaCanal({navigation}){
+  return (
+
+// eslint-disable-next-line react-native/no-inline-styles
+<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+
+<Text>Tela Canal</Text>
+<Text>Universidade Católica de PE</Text>
+
+<Button
+title='Home'
+onPress={()=>navigation.goBack()}
+/>
+
+
+
+<Button
+title='Voltar'
+onPress={()=>navigation.navigate('Home')}
+/>
+
+</View>
+
+  );
+}
 
 export default function App1(){
 
-const[cor,SetCor]=useState("black")
+return (
 
-const mudaCor=(c)=>{SetCor(c)}
+   <NavigationContainer>
+  <Pilha.Navigator initialRouteName='TelaHome'>
 
-return(
-
-  <SafeAreaView style={Estilo.conteiner}>
-
-    <StatusBar 
-    backgroundColor={cor}
-    barStyle='light-content'
-    hidden={false}
-    animated={true}
-    translucent={true}
-
-      />
-
-  <View>
-   <Text style={Estilo.textoPadrão}>Yuri Silva</Text>
-  
-   <Text style={Estilo.textoTitulo}>Unicap.br</Text>
+  <Pilha.Screen
+  name="Home"
+  component={TelaHome}
+  options={{title:'Tela Inicial'}}
+  />
 
 
-    <Button
-   title="Vermelho"
-   onPress={()=>{SetCor("red")}}
-    />
-
-   <Button
-   title="Azul"
-   onPress={()=>{mudaCor("blue")}}
-    />
+<Pilha.Screen
+  name="Canal"
+  component={TelaCanal}
+  options={{title:'Tela Canal'}}
+  />
 
 
-   <Button
-   title="Verde"
-   onPress={()=>{mudaCor("green")}}
-    />
-
-
-
-
-
-
-   {/*<CxTx/>*/}
-
-   {/*<Rolagem/>*/}
-
-   {/*<Toque/>*/}
-
-   {/*<Modal/>*/}
-
-
-   
-   </View>
-
-
-</SafeAreaView>
-
+  </Pilha.Navigator>
+   </NavigationContainer>
  );
 };
-
-const estilos = StyleSheet.create({
-logo:{
-
-  width:250,
-  resizeMode:'contain'
-},
-imagemFundo:{
-  flex:1,
-  resizeMode:"cover",
-  width:"100%"
-
-}
-
-})
-
-
-
