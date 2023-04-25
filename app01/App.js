@@ -18,11 +18,18 @@ function TelaHome({navigation}){
 <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
 
 <Text>Tela Home</Text>
-<Text>curso react-native</Text>
+<Text>Indíce: telacanal,telacursos</Text>
 
 <Button
 title='TelaCanal'
 onPress={()=>navigation.navigate('Canal')}
+/>
+
+
+
+<Button
+title='TelaCursos'
+onPress={()=>navigation.navigate('Cursos')}
 />
 
 
@@ -38,12 +45,7 @@ function TelaCanal({navigation}){
 <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
 
 <Text>Tela Canal</Text>
-<Text>Universidade Católica de PE</Text>
-
-<Button
-title='Home'
-onPress={()=>navigation.goBack()}
-/>
+<Text>Indíce: telaHome</Text>
 
 
 
@@ -56,6 +58,68 @@ onPress={()=>navigation.navigate('Home')}
 
   );
 }
+
+function TelaCursos({navigation}){
+  return (
+
+// eslint-disable-next-line react-native/no-inline-styles
+<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+
+<Text>Tela Cursos</Text>
+
+
+
+<Button
+title='cursoReactNative'
+onPress={()=>navigation.navigate('CursosReactNative',{aulas:100,autor:'Yuri'})}
+/>
+
+
+
+<Button
+title='Voltar'
+onPress={()=>navigation.goBack()}
+/>
+
+</View>
+
+  );
+}
+
+
+
+function TelaCursosReactNative({route,navigation}){
+
+  const {aulas}=route.params;
+  const{autor}=route.params;
+
+  return (
+
+// eslint-disable-next-line react-native/no-inline-styles
+<View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+
+<Text>Curso React Native</Text>
+<Text>Aulas:{aulas}</Text>
+<Text>Autor:{autor}</Text>
+
+
+
+<Button
+title='Voltar'
+onPress={()=>navigation.goBack()}
+/>
+
+<Button
+title='Home'
+onPress={()=>navigation.navigate('Home')}
+/>
+
+</View>
+
+  );
+}
+
+
 
 export default function App1(){
 
@@ -76,6 +140,20 @@ return (
   component={TelaCanal}
   options={{title:'Tela Canal'}}
   />
+
+
+<Pilha.Screen
+  name="Cursos"
+  component={TelaCursos}
+  options={{title:'Tela de Cursos'}}
+  />
+
+<Pilha.Screen
+  name="CursosReactNative"
+  component={TelaCursosReactNative}
+  options={{title:'Curso de Reacat Native'}}
+  />
+
 
 
   </Pilha.Navigator>
