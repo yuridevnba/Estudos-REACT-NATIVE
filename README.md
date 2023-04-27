@@ -36,7 +36,7 @@ Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qua
 <li> Componente RefreshControl em React Native      - Aula 22 </li>
 <li> Componente StatusBar em React Native - Aula 24 </li>
 <li> Navigation em React Native #P1 - Aula 25 </li>
-<li> </li>
+<li>  Navigation em React Native #P2 -  Aula 26 </li>
 <li> </li>
  </ul>
 
