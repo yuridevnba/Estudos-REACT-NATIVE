@@ -4,11 +4,12 @@
 import React,{Component} from 'react';
 import {Text, View,StyleSheet, Button} from 'react-native';
 import Estilo from './componentes/Estilos';
+import TelaCanalE from './componentes/TelaCanal'
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDraweNavigator } from '@react-navigation/drawer';
 
 
-const Guias = createBottomTabNavigator();
+const Guias = createDraweNavigator();
 
 function TelaHome({navigation}){
 
@@ -25,18 +26,11 @@ function TelaHome({navigation}){
 }
 
 function TelaCanal({navigation}){
-       return (
-
-     // eslint-disable-next-line react-native/no-inline-styles
-    <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-
-          <Text>Tela Canal</Text>
-          <Text>Indíce: telaHome</Text>
-
-      </View>
-
-  );
+  return(
+    <TelaCanalE nav={navigation}/>
+  )
 }
+
 
   function TelaCursos({navigation}){
         return (
