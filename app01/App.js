@@ -131,14 +131,41 @@ return (
   <Pilha.Screen
   name="Home"
   component={TelaHome}
-  options={{title:'Tela Inicial'}}
+  options={{
+  title:'Tela Inicial',
+  headerStyle:{
+    backgroundColor:'#008'
+  },
+  headerTintColor:'#fff',
+  headerRight:()=>(
+
+<Button
+
+title='CURSOS'
+color="#000"
+onPress={()=>alert('Botão CUrsos Clicado')}
+
+/>
+  ),
+  }}
   />
 
 
 <Pilha.Screen
   name="Canal"
   component={TelaCanal}
-  options={{title:'Tela Canal'}}
+  options={{
+    title:'Tela Canal',
+    headerStyle:{
+      backgroundColor:'#008'
+    },
+    headerTintColor:'#fff',
+    headerTitleStyle:{
+      fontWeight:'bold'
+
+    }
+    }}
+  
   />
 
 
