@@ -42,6 +42,6 @@ Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qua
 
 
 METODOLOGIA
-<p align ="justify">Além de cobrir a teoria de forma clara e objetiva, o curso possui muito enfoque prático. Cada seção do curso possui exercícios resolvidos e exercícios propostos para  treinar. E alguns  projetos  reais. </p>
+<p align ="justify">Estou tentando  cobrir a teoria de forma clara e objetiva, mas direciono para o prático, ou seja tento fazer app básico que me ajudam no dia, por exemplo, um app de tarefas que lista oq tenho pra fazer no dia etc. </p>
 
 > :construction: Projeto em construção :construction:
