@@ -5,7 +5,7 @@
 <header>
 Olá, sou Yuri Henrique.
 
-Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qualificação que estou realizando com React-Native. 🌟🚀
+Estudos e treinamentos sobre React-Native. 🌟🚀
 
  
 
