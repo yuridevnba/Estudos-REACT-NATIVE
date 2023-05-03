@@ -37,7 +37,12 @@ Estudos e treinamentos sobre React-Native. 🌟🚀
 <li> Componente StatusBar em React Native - Aula 24 </li>
 <li> Navigation em React Native #P1 - Aula 25 </li>
 <li>  Navigation em React Native #P2 -  Aula 26 </li>
-<li> </li>
+<li>Navigation em React Native #P3  - Aula 27 </li>
+<li>Navigation em React Native #P4 TabNavigation  - Aula 28</li>
+<li>Navigation em React Native #P5 DrawerNavigation - Aula 29</li>
+<li></li>
+<li></li>
+<li></li>
  </ul>
 
 
